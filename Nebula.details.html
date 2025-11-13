@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nebula Navigator Detail - Gurnoor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Define the color palette for easy reference */
+        /* Faint Sage/Pewter Background: #E6EBE0 */
+        /* Duller Sage-Green Header/Accent: #A5B4A8 */
+        /* Light Pink/Rose Accent: #F0DADA */
+        /* Dark Text: #3A403A */
+        /* Medium Button/Accent: #82998A */
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #E6EBE0; 
+            /* Added min-h-screen and flex for main content centering */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        /* Custom class for the light pink accent */
+        .border-light-pink { border-color: #F0DADA; }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header Section (Fixed at the top) -->
+    <header class="p-6 md:p-10 shadow-lg sticky top-0 z-20" style="background-color: #A5B4A8;">
+        <div class="max-w-7xl mx-auto flex items-center">
+            <!-- Back to Portfolio Link -->
+            <a id="back-link" href="gurnoor_portfolio.html" class="text-xl font-semibold text-[#3A403A] hover:text-gray-900 transition duration-300 hover:scale-105">
+                &larr; Back to Portfolio
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content Centered -->
+    <main class="flex-grow flex items-start justify-center p-6 md:p-10">
+        <div class="max-w-4xl w-full bg-white p-8 rounded-2xl shadow-2xl border-t-8 border-light-pink transition duration-500 transform hover:shadow-3xl">
+            <h2 id="game-title" class="text-4xl font-extrabold text-[#3A403A] mb-4 border-b-2 border-[#A5B4A8] pb-3">
+                Nebula Navigator
+            </h2>
+            <div class="text-[#3A403A] space-y-5">
+                <p class="text-xl font-bold border-l-4 border-[#82998A] pl-3">
+                    Project Summary: Unlocking the Stars with A*
+                </p>
+                <p>
+                    **Nebula Navigator** is a challenging puzzle game where players must plot optimal flight paths between celestial bodies across a dynamic space map. This isn't just a simple connection game—it's a demonstration of complex algorithmic problem-solving in a fun, visual environment.
+                </p>
+                <p>
+                    The core feature is a custom-built **A\* (A-star) pathfinding algorithm** implemented in Python. We specifically tailored the heuristic function to navigate complex, weighted star systems, where different interstellar regions impose varying fuel costs. This project was a deep dive into efficient graph traversal, algorithm optimization, and real-time path visualization.
+                </p>
+                
+                <h3 class="text-2xl font-bold pt-4 text-[#82998A]">Key Technologies & Skills Demonstrated</h3>
+                <ul class="list-disc list-inside ml-4 space-y-2 text-lg">
+                    <li>**Language:** Python 🐍 (Used for backend game logic)</li>
+                    <li>**Framework:** Pygame (Used for simple 2D graphics and user interaction).</li>
+                    <li>**Algorithm Mastery:** Custom A\* implementation, demonstrating knowledge of informed search and graph weighting.</li>
+                    <li>**Code Practice:** Emphasis on modular, object-oriented design for managing game entities (planets, ships, paths).</li>
+                </ul>
+
+                <div class="mt-8 p-6 rounded-xl text-center shadow-inner" style="background-color: #F0DADA;">
+                    <p class="font-extrabold text-2xl text-[#3A403A]">🚀 Game Simulation Area 🚀</p>
+                    <p class="text-md text-[#3A403A] pt-2">
+                        This section is reserved for an embedded simulation or a video showcasing the A* pathfinding algorithm in action, calculating the shortest, most fuel-efficient route.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer for spacing on shorter screens -->
+    <footer class="p-4 mt-auto"></footer>
+
+    <script>
+        // Set the dynamic title and back link based on URL parameters (optional but good practice)
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            // Use the parameter if available, otherwise use the default name
+            const gameName = params.get('game') || 'Nebula Navigator'; 
+            document.title = gameName + ' Detail - Gurnoor';
+            document.getElementById('game-title').textContent = gameName;
+        });
+    </script>
+</body>
+</html>

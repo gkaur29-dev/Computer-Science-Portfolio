@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Chess Detail - Gurnoor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Define the color palette for easy reference */
+        /* Faint Sage/Pewter Background: #E6EBE0 */
+        /* Duller Sage-Green Header/Accent: #A5B4A8 */
+        /* Light Pink/Rose Accent: #F0DADA */
+        /* Dark Text: #3A403A */
+        /* Medium Button/Accent: #82998A */
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #E6EBE0; 
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        /* Custom class for the light pink accent */
+        .border-light-pink { border-color: #F0DADA; }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header Section (Fixed at the top) -->
+    <header class="p-6 md:p-10 shadow-lg sticky top-0 z-20" style="background-color: #A5B4A8;">
+        <div class="max-w-7xl mx-auto flex items-center">
+            <!-- Back to Portfolio Link -->
+            <a id="back-link" href="gurnoor_portfolio.html" class="text-xl font-semibold text-[#3A403A] hover:text-gray-900 transition duration-300 hover:scale-105">
+                &larr; Back to Portfolio
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content Centered -->
+    <main class="flex-grow flex items-start justify-center p-6 md:p-10">
+        <div class="max-w-4xl w-full bg-white p-8 rounded-2xl shadow-2xl border-t-8 border-light-pink transition duration-500 transform hover:shadow-3xl">
+            <h2 id="game-title" class="text-4xl font-extrabold text-[#3A403A] mb-4 border-b-2 border-[#A5B4A8] pb-3">
+                Quantum Chess
+            </h2>
+            <div class="text-[#3A403A] space-y-5">
+                <p class="text-xl font-bold border-l-4 border-[#82998A] pl-3">
+                    Project Summary: Probabilistic Decision Making
+                </p>
+                <p>
+                    **Quantum Chess** is a conceptual board game developed in C++ to simulate complex game theory decisions where pieces can exist in multiple states simultaneously (superposition) until a move "observations" their true position.
+                </p>
+                <p>
+                    The challenge lay in designing the AI opponent. It utilizes a modified **Minimax algorithm** which had to be rewritten to account for the multiple simultaneous, probabilistic outcomes of each move. This expanded the traditional decision tree exponentially, forcing an emphasis on efficient pruning and state evaluation, demonstrating an advanced grasp of algorithmic optimization.
+                </p>
+                
+                <h3 class="text-2xl font-bold pt-4 text-[#82998A]">Key Technologies & Skills Demonstrated</h3>
+                <ul class="list-disc list-inside ml-4 space-y-2 text-lg">
+                    <li>**Language:** C++ 🚀 (Chosen for performance and low-level control)</li>
+                    <li>**Library:** SFML (Used for window management and graphics rendering).</li>
+                    <li>**AI:** Modified Minimax algorithm for probabilistic outcomes and efficient tree pruning.</li>
+                    <li>**Concept:** Implementation of complex probabilistic state management.</li>
+                </ul>
+
+                <!-- NEW SECTION: Game Demo Area -->
+                <section class="mt-8 p-6 rounded-xl border-4 border-[#82998A] bg-[#E6EBE0] shadow-xl">
+                    <h3 class="text-3xl font-extrabold text-[#3A403A] mb-4 border-b-2 border-[#82998A] pb-2">🕹️ Game Demo Area</h3>
+                    <div class="aspect-video w-full bg-gray-300 flex items-center justify-center rounded-lg shadow-inner">
+                        <p class="text-xl font-semibold text-gray-600 p-4">Interactive Simulation Placeholder (Needs game embed)</p>
+                    </div>
+                    <p class="text-sm mt-3 text-gray-700">This area is ready for the live game embedded in an iframe or canvas, visualizing superposition and observation.</p>
+                </section>
+                
+                <!-- NEW SECTION: Screenshots -->
+                <section class="mt-8 p-6 rounded-xl border-4 border-[#F0DADA] bg-white shadow-xl">
+                    <h3 class="text-3xl font-extrabold text-[#3A403A] mb-4 border-b-2 border-[#F0DADA] pb-2">📸 Key Screenshots</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="aspect-square bg-gray-200 rounded-lg flex items-center justify-center text-gray-500 text-sm">Superposition Visualization</div>
+                        <div class="aspect-square bg-gray-200 rounded-lg flex items-center justify-center text-gray-500 text-sm">Observation Effect</div>
+                        <div class="aspect-square bg-gray-200 rounded-lg flex items-center justify-center text-gray-500 text-sm">AI Move Analysis</div>
+                    </div>
+                    <p class="text-sm mt-3 text-gray-700">Mockup showing the complex board state and the AI's calculated moves.</p>
+                </section>
+
+                <!-- NEW SECTION: Video -->
+                <section class="mt-8 p-6 rounded-xl border-4 border-[#A5B4A8] bg-[#C2C9C2] shadow-xl">
+                    <h3 class="text-3xl font-extrabold text-[#3A403A] mb-4 border-b-2 border-[#A5B4A8] pb-2">📺 Walkthrough Video</h3>
+                    <div class="aspect-video w-full bg-gray-700 flex items-center justify-center rounded-lg shadow-xl">
+                        <div class="text-white text-center">
+                            <svg class="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+                            <p class="font-semibold">Video Embed Placeholder</p>
+                        </div>
+                    </div>
+                    <p class="text-sm mt-3 text-gray-800">Space for a YouTube or Vimeo embedded trailer/walkthrough of the Minimax logic.</p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer for spacing on shorter screens -->
+    <footer class="p-4 mt-auto"></footer>
+
+    <script>
+        // Set the dynamic title and back link based on URL parameters (optional but good practice)
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const gameName = params.get('game') || 'Quantum Chess'; 
+            document.title = gameName + ' Detail - Gurnoor';
+            document.getElementById('game-title').textContent = gameName;
+        });
+    </script>
+</body>
+</html>
